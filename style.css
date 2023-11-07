@@ -42,7 +42,7 @@ body {
     color: white;
     top: 0.4rem;
     left: 50%;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     line-height: 50px;
     transform: translateX(-50%);
     cursor: pointer;
@@ -123,6 +123,7 @@ body {
 }
 
 .sidebar ul li a i {
+    font-size: 1.4rem;
     min-width: 50px;
     text-align: center;
     height: 50px;
