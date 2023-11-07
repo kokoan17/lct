@@ -52,6 +52,11 @@ body {
     left: 90%;
 }
 
+.sidebar .top {
+    display: flex;
+    align-items: center;
+}
+
 .sidebar .top .logo {
     color: white;
     display: flex;
@@ -60,6 +65,10 @@ body {
     align-items: center;
     pointer-events: none;
     opacity: 0;
+}
+
+.sidebar .top .logo span {
+    font-size: 1.2rem;
 }
 
 .sidebar.active .top .logo {
@@ -177,6 +186,14 @@ body {
     justify-content: space-between;
     padding: 1rem 1.5rem;
     box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.06), 0px 1px 3px 0px rgba(16, 24, 40, 0.10);
+}
+
+.main-content__top h1 {
+    font-size: 2.5rem;
+    background-color: #2AA5A0;
+    background-image: linear-gradient(90deg, #293F8E, #E9555E);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .hr {
