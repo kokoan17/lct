@@ -177,20 +177,15 @@ body {
     left: 80px;
     transition: all 0.5s ease;
     width: calc(100% - 80px);
-    /* padding: 1rem; */
 }
 
 .main-content__top {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     padding: 1rem 1.5rem;
     box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.06), 0px 1px 3px 0px rgba(16, 24, 40, 0.10);
 }
 
 .main-content__top h1 {
     font-size: 2.5rem;
-    background-color: #2AA5A0;
     background-image: linear-gradient(90deg, #293F8E, #E9555E);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -201,74 +196,125 @@ body {
     border-bottom-width: 0;
 }
 
-.main-content__active-tasks {
-    padding: 1rem 1.5rem;
+.container {
+    padding: 2rem 3rem;
 }
 
-.main-content__active-tasks h1 {
-    margin-bottom: 8px;
-    font-size: 32px;
+.main-content__history {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.history-title h1 {
+    font-size: 2rem;
     font-weight: 700;
     line-height: 40px;
 }
 
-.main-content__active-tasks p {
-    color: var(--neutral-80, #5B6776);
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-}
-
-.tasks {
-    margin-top: 36px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.firstTasks,
-.secondTasks {
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-}
-
-.task {
-    padding: 24px;
-    border-radius: 6px;
+.history-search input{
+    width: 342px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 1000px;
     border: 1px solid var(--neutral-40, #E2E8F0);
-    background: var(--base-white, #FFF);
+    background: var(--neutral-10, #FFF);
     box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+
+.history-search i {
+    color: white;
+    font-size: 1.1rem;
+    padding: 0.75rem;
+    background-image: linear-gradient(135deg, #293F8E, #E9555E);
+    border-radius: 1000px;
+    cursor: pointer;
     transition: all 0.5s ease;
 }
 
-.task:hover {
-    transform: scale(1.05);
+.history-search i:hover {
+    transform: scale(1.1);
 }
 
-.task-title {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+.history-table {
+    margin-top: 2rem;
 }
 
-.add-tasks {
-    margin-top: 24px;
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    /* border: 3px solid purple; */
+}
+
+table th {
+    text-align: start;
+	font-weight: bold;
+	padding: 1rem;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.16px;
+    background-color: #efefef;
+	/* background: #efefef;
+	border: 1px solid #dddddd; */
+}
+
+table td {
+	/* border: 1px solid #dddddd; */
+	padding: 1.25rem 1rem;
+    color: #344055;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.16px;
+}
+
+table tr:nth-child(odd) td:nth-child(5) {
+    color: green;
+}
+
+table tr:nth-child(even) td:nth-child(5) {
+    color: red;
+}
+
+.history-btn {
     text-align: center;
-    padding: 23px;
-    width: 1041px;
-    border-radius: 6px;
-    border: 1px solid var(--neutral-40, #E2E8F0);
-    background: var(--violet-200, #F7F8FD);
-    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+    width: 16.5rem;
+    background: linear-gradient(135deg, #293F8E, #E9555E);
+    border-radius: 1000px;
+    cursor: pointer;
+    transition: all 0.5s ease;
 }
 
-.add-tasks p {
-    margin-top: 16px;
-    color: #293F8E;
-    font-size: 18px;
+.history-btn:hover {
+    transform: scale(1.1);
 }
 
-.add-tasks a i {
-    background: linear-gradient(45deg, #E9555E, #293F8E);
+.history-btn p {
+    color: white;
+    font-size: 1.125rem;
+}
+
+.history-bottom {
+    position: fixed;
+    left: 128px;
+    bottom: 0;
+    padding: 0.875rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    /* background-color: #efefef; */
+    transition: all 0.5s ease;
+}
+
+.history-bottom.active {
+    left: 298px;
+}
+
+.next-icons img {
+    cursor: pointer;
 }
